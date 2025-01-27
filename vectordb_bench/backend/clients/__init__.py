@@ -121,7 +121,7 @@ class DB(Enum):
             return AlloyDB
 
         if self == DB.Elasticsearch:
-            from .aliyun_elasticsearch.aliyun_elasticsearch import Elasticsearch
+            from .elasticsearch.elasticsearch import Elasticsearch
 
             return Elasticsearch
 

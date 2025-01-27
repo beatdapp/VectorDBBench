@@ -44,7 +44,7 @@ All the database client supported
 | qdrant                   | `pip install vectordb-bench[qdrant]`        |
 | pinecone                 | `pip install vectordb-bench[pinecone]`      |
 | weaviate                 | `pip install vectordb-bench[weaviate]`      |
-| elastic, aliyun_elasticsearch| `pip install vectordb-bench[elastic]`       |
+| elastic, elasticsearch   | `pip install vectordb-bench[elastic]`       |
 | pgvector, pgvectorscale, pgdiskann, alloydb | `pip install vectordb-bench[pgvector]`      |
 | pgvecto.rs               | `pip install vectordb-bench[pgvecto_rs]`    |
 | redis                    | `pip install vectordb-bench[redis]`         |
