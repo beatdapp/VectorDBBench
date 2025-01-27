@@ -2,7 +2,7 @@ from ..elastic_cloud.config import ElasticCloudIndexConfig
 from ..elastic_cloud.elastic_cloud import ElasticCloud
 
 
-class AliyunElasticsearch(ElasticCloud):
+class Elasticsearch(ElasticCloud):
     def __init__(
         self,
         dim: int,

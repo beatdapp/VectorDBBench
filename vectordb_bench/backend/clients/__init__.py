@@ -37,7 +37,7 @@ class DB(Enum):
     MemoryDB = "MemoryDB"
     Chroma = "Chroma"
     AWSOpenSearch = "OpenSearch"
-    AliyunElasticsearch = "AliyunElasticsearch"
+    Elasticsearch = "Elasticsearch"
     Test = "test"
     AliyunOpenSearch = "AliyunOpenSearch"
     MongoDB = "MongoDB"
@@ -120,10 +120,10 @@ class DB(Enum):
 
             return AlloyDB
 
-        if self == DB.AliyunElasticsearch:
-            from .aliyun_elasticsearch.aliyun_elasticsearch import AliyunElasticsearch
+        if self == DB.Elasticsearch:
+            from .aliyun_elasticsearch.aliyun_elasticsearch import Elasticsearch
 
-            return AliyunElasticsearch
+            return Elasticsearch
 
         if self == DB.AliyunOpenSearch:
             from .aliyun_opensearch.aliyun_opensearch import AliyunOpenSearch
@@ -221,10 +221,10 @@ class DB(Enum):
 
             return AlloyDBConfig
 
-        if self == DB.AliyunElasticsearch:
-            from .aliyun_elasticsearch.config import AliyunElasticsearchConfig
+        if self == DB.Elasticsearch:
+            from .elasticsearch.config import ElasticsearchConfig
 
-            return AliyunElasticsearchConfig
+            return ElasticsearchConfig
 
         if self == DB.AliyunOpenSearch:
             from .aliyun_opensearch.config import AliyunOpenSearchConfig
@@ -303,7 +303,7 @@ class DB(Enum):
 
             return _alloydb_case_config.get(index_type)
 
-        if self == DB.AliyunElasticsearch:
+        if self == DB.Elasticsearch:
             from .elastic_cloud.config import ElasticCloudIndexConfig
 
             return ElasticCloudIndexConfig

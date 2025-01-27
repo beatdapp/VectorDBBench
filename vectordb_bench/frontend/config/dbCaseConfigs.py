@@ -1234,11 +1234,11 @@ AlloyDBPerformanceConfig = [
     CaseConfigParamInput_max_parallel_workers_AlloyDB,
 ]
 
-AliyunElasticsearchLoadingConfig = [
+ElasticsearchLoadingConfig = [
     CaseConfigParamInput_EFConstruction_AliES,
     CaseConfigParamInput_M_AliES,
 ]
-AliyunElasticsearchPerformanceConfig = [
+ElasticsearchPerformanceConfig = [
     CaseConfigParamInput_EFConstruction_AliES,
     CaseConfigParamInput_M_AliES,
     CaseConfigParamInput_NumCandidates_AliES,
@@ -1292,9 +1292,9 @@ CASE_CONFIG_MAP = {
         CaseLabel.Load: AlloyDBLoadConfig,
         CaseLabel.Performance: AlloyDBPerformanceConfig,
     },
-    DB.AliyunElasticsearch: {
-        CaseLabel.Load: AliyunElasticsearchLoadingConfig,
-        CaseLabel.Performance: AliyunElasticsearchPerformanceConfig,
+    DB.Elasticsearch: {
+        CaseLabel.Load: ElasticsearchLoadingConfig,
+        CaseLabel.Performance: ElasticsearchPerformanceConfig,
     },
     DB.AliyunOpenSearch: {
         CaseLabel.Load: AliyunOpensearchLoadingConfig,

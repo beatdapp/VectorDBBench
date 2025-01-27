@@ -3,9 +3,9 @@ from pydantic import BaseModel, SecretStr
 from ..api import DBConfig
 
 
-class AliyunElasticsearchConfig(DBConfig, BaseModel):
+class ElasticsearchConfig(DBConfig, BaseModel):
     #: Protocol in use to connect to the node
-    scheme: str = "http"
+    scheme: str = "https"
     host: str = ""
     port: int = 9200
     user: str = "elastic"

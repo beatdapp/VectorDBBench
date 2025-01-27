@@ -33,7 +33,6 @@ FAVICON = "https://assets.zilliz.com/favicon_f7f922fe27.png"
 HEADER_ICON = "https://assets.zilliz.com/vdb_benchmark_db790b5387.png"
 
 # RedisCloud icon: https://assets.zilliz.com/Redis_Cloud_74b8bfef39.png
-# Elasticsearch icon: https://assets.zilliz.com/elasticsearch_beffeadc29.png
 # Chroma icon: https://assets.zilliz.com/chroma_ceb3f06ed7.png
 DB_TO_ICON = {
     DB.Milvus: "https://assets.zilliz.com/milvus_c30b0d1994.png",
@@ -47,6 +46,7 @@ DB_TO_ICON = {
     DB.Redis: "https://assets.zilliz.com/Redis_Cloud_74b8bfef39.png",
     DB.Chroma: "https://assets.zilliz.com/chroma_ceb3f06ed7.png",
     DB.AWSOpenSearch: "https://assets.zilliz.com/opensearch_1eee37584e.jpeg",
+    DB.Elasticsearch: "https://assets.zilliz.com/elasticsearch_beffeadc29.png",
 }
 
 # RedisCloud color: #0D6EFD
