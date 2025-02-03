@@ -65,7 +65,7 @@ class AutoIndexConfig(MilvusIndexConfig, DBCaseConfig):
         print("DEBUG: updating search param...")
         return {
             "metric_type": self.parse_metric(),
-            "level": 3  # precision control
+            "level": 5  # precision control
         }
 
 
