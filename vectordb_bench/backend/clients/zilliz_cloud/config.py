@@ -1,7 +1,11 @@
+import logging
+
 from pydantic import SecretStr
 
 from ..api import DBCaseConfig, DBConfig
 from ..milvus.config import IndexType, MilvusIndexConfig
+
+log = logging.getLogger(__name__)
 
 
 class ZillizCloudConfig(DBConfig):
@@ -19,7 +23,7 @@ class ZillizCloudConfig(DBConfig):
 
 class AutoIndexConfig(MilvusIndexConfig, DBCaseConfig):
     index: IndexType = IndexType.AUTOINDEX
-    level: int = 5
+    level: int = 10
 
     def index_param(self) -> dict:
         return {
@@ -29,6 +33,7 @@ class AutoIndexConfig(MilvusIndexConfig, DBCaseConfig):
         }
 
     def search_param(self) -> dict:
+        log.info(f"Setting search level to {self.level}")
         return {
             "metric_type": self.parse_metric(),
             "params": {
