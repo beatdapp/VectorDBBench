@@ -1,6 +1,10 @@
+import logging
+
 from pydantic import BaseModel, SecretStr, validator
 
 from ..api import DBCaseConfig, DBConfig, IndexType, MetricType
+
+log = logging.getLogger(__name__)
 
 
 class MilvusConfig(DBConfig):
@@ -61,11 +65,11 @@ class AutoIndexConfig(MilvusIndexConfig, DBCaseConfig):
             "params": {},
         }
 
-    def search_param(self) -> dict:
-        print("DEBUG: updating search param...")
+    def search_param(self, level: int = 5) -> dict:
+        log.info(f"Setting {level=} in search param...")
         return {
             "metric_type": self.parse_metric(),
-            "level": 5  # precision control
+            "level": level,  # precision control
         }
 
 
