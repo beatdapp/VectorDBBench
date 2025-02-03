@@ -65,11 +65,9 @@ class AutoIndexConfig(MilvusIndexConfig, DBCaseConfig):
             "params": {},
         }
 
-    def search_param(self, level: int = 5) -> dict:
-        log.info(f"Setting {level=} in search param...")
+    def search_param(self) -> dict:
         return {
             "metric_type": self.parse_metric(),
-            "params": {"level": level},  # precision control
         }
 
 

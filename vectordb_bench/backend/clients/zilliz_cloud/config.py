@@ -19,7 +19,7 @@ class ZillizCloudConfig(DBConfig):
 
 class AutoIndexConfig(MilvusIndexConfig, DBCaseConfig):
     index: IndexType = IndexType.AUTOINDEX
-    level: int = 1
+    level: int = 5
 
     def index_param(self) -> dict:
         return {
