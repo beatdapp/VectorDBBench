@@ -1,10 +1,6 @@
-import logging
-
 from pydantic import BaseModel, SecretStr, validator
 
 from ..api import DBCaseConfig, DBConfig, IndexType, MetricType
-
-log = logging.getLogger(__name__)
 
 
 class MilvusConfig(DBConfig):
